@@ -1,0 +1,567 @@
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$link-decoration: none;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+// 4. Include any default map overrides here
+$custom-colors: (
+	"farve": $cyan-400,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "bootstrapComponents";
+
+// 5. Du kan lave styling her...
+
+
+
+body{
+	background-image: url("/billeder/Texture 05.jpg");
+
+	background-size: 100%;
+
+
+}		// body til baggroundsbillede måske??
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto Flex', sans-serif;
+
+}
+.astronaut{
+	font-family: "afronaut", sans-serif;
+	letter-spacing: 14px;
+	font-size: 20px;
+}
+.h2orange{
+	color: #C46210 ;
+	font-family: "ab-countryroad", sans-serif;
+	font-size: 27px;
+	letter-spacing: 2.7px;
+}
+
+.h3Pcontainer{
+	padding-left: 30px;
+}
+.h3test{
+	margin-top: 200px;
+	color: #C46210;
+	font-size: 30px;
+	font-family: "afronaut", sans-serif;
+}
+.ptest{
+	font-size: 14px;
+	font-family: 'Roboto Flex', sans-serif;
+	margin-right: 32px;
+}
+
+.cta{
+	margin-top: 20px;
+	width: 131px;
+	height: 40px;
+	background: #FF7A00;
+	border-radius: 60px;
+	color: white;
+	border: 0px;
+}
+
+.ellipse29-top{
+	overflow: hidden; /* Dette skjuler alt, der er uden for containeren */
+	width: 100%; /* Gør containeren halv så bred som skærmen */
+	position: relative;
+}
+.ellipse29{
+
+	height: 326px;
+	background-image: url("/billeder/Ellipse 29.png");
+	background-repeat: no-repeat;
+	width: 200%; /* Gør billedet dobbelt så bredt som sin container */
+	position: relative;
+	right: -30%;
+
+
+}
+.ellipse34-top{
+	margin-top: 200px;
+	overflow: hidden; /* Dette skjuler alt, der er uden for containeren */
+	width: 100%; /* Gør containeren halv så bred som skærmen */
+	position: relative;
+}
+.ellipse34{
+	height: 326px;
+	background-image: url("/billeder/Ellipse 34.png");
+	background-repeat: no-repeat;
+	width: 200%; /* Gør billedet dobbelt så bredt som sin container */
+	position: relative;
+
+}
+.container {
+	width: 100%;
+	max-width: 1600px;
+	margin: 0 auto;
+	padding-left: 128px;
+	padding-right: 128px;
+
+
+
+
+	@media (max-width: 1024px) {
+		padding-left: 64px;
+		padding-right: 64px;
+	}
+
+	@media (max-width: 767px) {
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+}
+
+.hamburger {
+	position: relative;
+	display: block;
+	width: 35px;
+	cursor: pointer;
+
+	appearance: none;
+	background: none;
+	outline: none;
+	border: none;
+}
+
+.hamburger .bar, .hamburger:after, .hamburger:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 5px;
+	background-color: #C46210;
+	margin: 6px 0px;
+	transition: 0.4s;
+}
+
+.hamburger.is-active:before {
+	transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active:after {
+	transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+	opacity: 0;
+}
+
+.mobile-nav {
+	position: fixed;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	min-height: 100vh;
+	display: block;
+	z-index: 98;
+	background-color:  #999A9E;
+	padding-top: 120px;
+	transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+	left: 0;
+}
+
+.mobile-nav a {
+	display: block;
+	width: 100%;
+	max-width: 200px;
+	margin: 0 auto 16px;
+	text-align: center;
+	padding: 12px 16px;
+	background-color: #EE964B;
+
+	color: black;
+	text-decoration: none;
+}
+
+.mobile-nav a:hover {
+	background-color: #24104f;
+}
+
+@media (min-width: 768px) {
+	.mobile-nav {
+		display: none;
+	}
+
+	.hamburger {
+		display: none;
+	}
+}
+
+
+.button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+
+	display: inline-block;
+	color: #FFF;
+	font-size: 20px;
+	background-color: #FF9FDB;
+	padding: 12px 16px;
+	border-radius: 8px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	cursor: pointer;
+
+	@media (max-width: 767px) {
+		font-size: 18px;
+	}
+}
+
+header {
+	color: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99;
+	// background-color: #12002F;
+
+	.container {
+		padding-top: 32px;
+		padding-bottom: 32px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		h2 {
+			color: inherit;
+			text-transform: uppercase;
+			font-size: 32px;
+			font-weight: 900;
+
+			span {
+				font-weight: 600;
+			}
+		}
+
+		nav {
+			display: grid;
+			grid-gap: 16px;
+			grid-template-columns: repeat(4, auto);
+
+			@media (max-width: 767px) {
+				display: none;
+			}
+
+			a {
+				color: inherit;
+				font-size: 20px;
+				text-decoration: none;
+			}
+		}
+	}
+
+	&.is-scrolling {
+		background-color: deeppink;
+		.container {
+			padding-top: 16px;
+			padding-bottom: 16px;
+		}
+	}
+}
+
+.material-symbols-outlined{
+	font-size: 32px;
+	color: #C46210 ;
+}
+
+.slider-container{
+
+	margin-top: 300px;
+	height: 200px;
+	background-color: black;
+}
+
+//paragraf 2
+
+.min-liste{
+	margin-right: 32px;
+}
+ul.min-liste > p:first-child {
+	font-weight: 900;
+	font-size: 14px ;
+
+}
+ul.min-liste > p:nth-child(2) {
+	font-family: "afronaut", sans-serif;
+	font-size: 20px;
+}
+
+ul.min-liste > p:nth-child(3) {
+	font-size: 14px;
+}
+
+ul.min-liste > p:last-child {
+	font-size: 14px;
+}
+
+.ctaknap{
+	display: flex;
+	justify-content: center;
+}
+
+
+.ellipse35-top{
+	overflow: hidden; /* Dette skjuler alt, der er uden for containeren */
+	width: 100%; /* Gør containeren halv så bred som skærmen */
+	position: relative;
+	margin-top: 50px;
+}
+.ellipse35{
+
+	height: 326px;
+	background-image: url("/billeder/Ellipse 35.png");
+	background-repeat: no-repeat;
+	width: 200%; /* Gør billedet dobbelt så bredt som sin container */
+	position: relative;
+	right: -30%;
+
+
+}
+
+.tænkGrønt{
+
+}
+.tænkGrøntOverskrift{
+	font-family: "afronaut", sans-serif;
+	font-size: 24px;
+	color: #1A6316;
+	display: flex;
+	justify-content: center;
+}
+.tænkGrøntBrødtekst{
+	font-size: 16px;
+	color: #1A6316;
+	width: 244px;
+	height: 77px;
+	font-weight: 5;
+	text-align: center;
+	display: flex;
+}
+
+.cirkelflex{
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+}
+.cirkelDiagram{
+	background-image: url("/billeder/procentDiagram.png");
+	width: 134.381px;
+	height: 134.381px;
+
+}
+.CO2{
+	color: #C46210;
+	text-align: center;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: normal;
+
+}
+.CO2Brødtekst{
+	color: #000;
+	text-align: center;
+	font-size: 11px;
+	font-style: normal;
+	line-height: normal;
+	font-family: "afronaut", sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
