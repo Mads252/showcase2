@@ -22,10 +22,10 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 
 body{
-	background-image: url("/billeder/Texture 05.jpg");
+	background-image: url("/billeder/textureTester.jpg"), url("/billeder/Rectanglebg.png");
 
-	background-size: 100%;
-
+	background-size: 100%, 100%;
+	background-repeat: no-repeat;
 
 }		// body til baggroundsbillede måske??
 * {
@@ -46,7 +46,6 @@ body{
 	font-size: 27px;
 	letter-spacing: 2.7px;
 }
-
 .h3Pcontainer{
 	padding-left: 30px;
 }
@@ -64,12 +63,13 @@ body{
 
 .cta{
 	margin-top: 20px;
-	width: 131px;
-	height: 40px;
+	width: 167px;
+	height: 45px;
 	background: #FF7A00;
 	border-radius: 60px;
 	color: white;
-	border: 0px;
+	border: none;
+	font-family: "afronaut", sans-serif;
 }
 
 .ellipse29-top{
@@ -133,6 +133,7 @@ body{
 	background: none;
 	outline: none;
 	border: none;
+
 }
 
 .hamburger .bar, .hamburger:after, .hamburger:before {
@@ -143,6 +144,7 @@ body{
 	background-color: #C46210;
 	margin: 6px 0px;
 	transition: 0.4s;
+	border-radius: 60px;
 }
 
 .hamburger.is-active:before {
@@ -165,9 +167,10 @@ body{
 	min-height: 100vh;
 	display: block;
 	z-index: 98;
-	background-color:  #999A9E;
+	background-color:  #8F9094;
 	padding-top: 120px;
 	transition: 0.4s;
+
 }
 
 .mobile-nav.is-active {
@@ -182,13 +185,14 @@ body{
 	text-align: center;
 	padding: 12px 16px;
 	background-color: #EE964B;
-
+	border-radius: 60px;
 	color: black;
 	text-decoration: none;
+	font-family: "afronaut", sans-serif;
 }
 
 .mobile-nav a:hover {
-	background-color: #24104f;
+	background-color: #C4C4C4;
 }
 
 @media (min-width: 768px) {
@@ -202,27 +206,7 @@ body{
 }
 
 
-.button {
-	appearance: none;
-	border: none;
-	outline: none;
-	background: none;
 
-	display: inline-block;
-	color: #FFF;
-	font-size: 20px;
-	background-color: #FF9FDB;
-	padding: 12px 16px;
-	border-radius: 8px;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: 700;
-	cursor: pointer;
-
-	@media (max-width: 767px) {
-		font-size: 18px;
-	}
-}
 
 header {
 	color: #FFF;
@@ -269,7 +253,8 @@ header {
 	}
 
 	&.is-scrolling {
-		background-color: deeppink;
+		background-color: #C4C4C4;;
+		height: 100px;
 		.container {
 			padding-top: 16px;
 			padding-bottom: 16px;
@@ -385,56 +370,33 @@ ul.min-liste > p:last-child {
 	font-family: "afronaut", sans-serif;
 }
 
+.faqArticle{
+	margin-left: 32px;
+	font-weight: bold;
+	font-size: 12px;
+}
+.faqOverskrift{
+	font-size: 22px;
+	font-family: "afronaut", sans-serif;
+}
+
+.kontakt-top{
+	margin-top: 50px;
+	overflow: hidden; /* Dette skjuler alt, der er uden for containeren */
+	width: 100%; /* Gør containeren halv så bred som skærmen */
+	position: relative;
+}
+.kontakt{
+	height: 180px;
+	background-image: url("/billeder/Kontakt.png");
+	background-repeat: no-repeat;
+	width: 200%; /* Gør billedet dobbelt så bredt som sin container */
+	position: relative;
+
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//styling til ny køb siden:
 
 
 
